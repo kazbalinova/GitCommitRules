@@ -1,18 +1,144 @@
 ﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f3ff;
+    background: #f7f5ff;
     color: #292544;
-    padding: 40px;
-}
-
-h1 {
-    font-family: "Sixtyfour Convergence", sans-serif;
-    color: #6657d9;
-    margin-bottom: 16px;
-}
-
-p {
-    font-size: 18px;
     line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #211c3d;
+    color: white;
+}
+
+.logo {
+    color: #c4b5fd;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    gap: 28px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #c4b5fd;
+}
+
+.hero {
+    min-height: 430px;
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #31245f, #7657d5);
+    color: white;
+}
+
+.tag {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    border: 1px solid #c4b5fd;
+    border-radius: 30px;
+    color: #ddd6fe;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-size: clamp(25px, 4vw, 42px);
+    line-height: 1.5;
+}
+
+.description {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    color: #eee9ff;
+    font-size: 17px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #49358e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background: #ddd6fe;
+}
+
+.about {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+    color: #5b45a5;
+    font-size: 30px;
+}
+
+.about p {
+    color: #66617d;
+    font-size: 17px;
+}
+
+.footer {
+    padding: 24px;
+    background: #211c3d;
+    color: #d8d3ed;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 75px 18px;
+    }
+
+    .about {
+        margin: 25px 15px;
+    }
 }
