@@ -1,50 +1,546 @@
-﻿
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Commit Project</title>
 
+    <meta name="theme-color" content="#fff9f2">
+    <meta name="description" content="GitCommitRules — веб-әзірлеу мен Git технологияларын үйренуге арналған жоба.">
+
+    <title>GitCommitRules — веб-әзірлеу әлемі</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sixtyfour+Convergence&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header class="header">
-        <a href="#" class="logo">GitSpace</a>
 
-        <nav class="navigation">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Жоғарғы мәзір -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span>GitCommit<span class="logo-accent">Rules</span></span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Мәзірді ашу"
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Басты бет</a>
+                <a href="#about" class="nav-link">Жоба туралы</a>
+                <a href="#features" class="nav-link">Мүмкіндіктер</a>
+                <a href="#technologies" class="nav-link">Технологиялар</a>
+                <a href="#versions" class="nav-link">Нұсқалар</a>
+            </div>
+
+            <a class="nav-github"
+               href="https://github.com/kazbalinova/GitCommitRules"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span>↗</span> GitHub
+            </a>
         </nav>
     </header>
 
-    <main id="home" class="hero">
-        <p class="tag">MY GIT PROJECT</p>
-        <h1>Build. Learn. Create.</h1>
-        <p class="description">
-            A simple website created to practice Git,
-            HTML, CSS and JavaScript.
-        </p>
-        <a href="#about" class="button">Explore project</a>
+    <main>
+
+        <!-- Басты бөлім -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Веб-әзірлеу жобасы
+                    </div>
+
+                    <h1>
+                        Идеядан<br>
+                        <span class="gradient-text">нақты жобаға.</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Git пен веб-әзірлеуді тәжірибе арқылы үйренеміз!
+                    </p>
+
+                    <p class="hero-description">
+                        HTML, CSS және JavaScript көмегімен әдемі веб-бет жасап,
+                        Git арқылы өзгерістерді басқарамыз. Әрбір жаңа қадам —
+                        жаңа мүмкіндік.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#about" class="button button-primary">
+                            Жобамен танысу <span>→</span>
+                        </a>
+
+                        <a href="https://github.com/kazbalinova/GitCommitRules"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="button button-secondary">
+                            <span>⌘</span> GitHub репозиторийі
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <div class="version-item">
+                            <span class="version-badge">v1.0</span>
+                            <span>Алғашқы нұсқа</span>
+                        </div>
+
+                        <div class="version-item">
+                            <span class="version-badge version-badge-dark">v2.0</span>
+                            <span>Жаңартылған нұсқа</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Декоративті код иллюстрациясы -->
+                <div class="hero-visual">
+                    <div class="visual-glow"></div>
+
+                    <div class="floating-tag tag-html">HTML</div>
+                    <div class="floating-tag tag-css">CSS</div>
+                    <div class="floating-tag tag-js">JS</div>
+                    <div class="floating-sparkle sparkle-one">✦</div>
+                    <div class="floating-sparkle sparkle-two">✧</div>
+
+                    <div class="code-window">
+                        <div class="window-top">
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="window-title">my-project.html</span>
+                            <span class="window-menu">•••</span>
+                        </div>
+
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="line-number">01</span>
+                                <span class="code-purple">&lt;!DOCTYPE</span>
+                                <span class="code-pink">html</span>
+                                <span class="code-purple">&gt;</span>
+                            </div>
+
+                            <div class="code-line">
+                                <span class="line-number">02</span>
+                                <span class="code-purple">&lt;html</span>
+                                <span class="code-pink">lang</span>=<span class="code-green">"kk"</span><span class="code-purple">&gt;</span>
+                            </div>
+
+                            <div class="code-line">
+                                <span class="line-number">03</span>
+                                <span class="code-purple">&lt;head&gt;</span>
+                            </div>
+
+                            <div class="code-line indent">
+                                <span class="line-number">04</span>
+                                <span class="code-purple">&lt;title&gt;</span>Менің жобам<span class="code-purple">&lt;/title&gt;</span>
+                            </div>
+
+                            <div class="code-line">
+                                <span class="line-number">05</span>
+                                <span class="code-purple">&lt;/head&gt;</span>
+                            </div>
+
+                            <div class="code-line">
+                                <span class="line-number">06</span>
+                                <span class="code-purple">&lt;body&gt;</span>
+                            </div>
+
+                            <div class="code-line indent">
+                                <span class="line-number">07</span>
+                                <span class="code-purple">&lt;h1&gt;</span>
+                                <span class="code-white">Сәлем, әлем!</span>
+                                <span class="code-purple">&lt;/h1&gt;</span>
+                            </div>
+
+                            <div class="code-line indent">
+                                <span class="line-number">08</span>
+                                <span class="code-comment">// Жаңа идеялар осында</span>
+                            </div>
+
+                            <div class="code-line">
+                                <span class="line-number">09</span>
+                                <span class="code-purple">&lt;/body&gt;</span>
+                            </div>
+
+                            <div class="code-line">
+                                <span class="line-number">10</span>
+                                <span class="code-purple">&lt;/html&gt;</span>
+                            </div>
+                        </div>
+
+                        <div class="code-footer">
+                            <span><span class="status-dot"></span> Жоба дайын</span>
+                            <span>UTF-8 · HTML</span>
+                        </div>
+                    </div>
+
+                    <div class="visual-caption">
+                        <span class="caption-icon">✦</span>
+                        <div>
+                            <strong>Ойлан. Код жаз. Жаса.</strong>
+                            <span>Кішкентай қадам — үлкен нәтиже</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Статистика -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">03</span>
+                    <span class="stat-label">Негізгі веб-технология</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">02</span>
+                    <span class="stat-label">Жоба нұсқасы</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Жаңа идеялар</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Жоба туралы -->
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-content">
+                    <span class="section-kicker">
+                        <span class="kicker-icon">✧</span> Жоба туралы
+                    </span>
+
+                    <h2>
+                        Әрбір үлкен идея<br>
+                        <span class="gradient-text">бір қадамнан басталады.</span>
+                    </h2>
+
+                    <p>
+                        GitCommitRules — веб-бет әзірлеу мен Git жүйесін
+                        қолдануды тәжірибе жүзінде үйренуге арналған жоба.
+                        Мұнда кодтың құрылымын жасаудан бастап, өзгерістерді
+                        GitHub-қа жариялауға дейінгі негізгі қадамдар қамтылған.
+                    </p>
+
+                    <div class="quote-card">
+                        <span class="quote-icon">✦</span>
+                        <p>
+                            Код жазуды ғана емес, өзгерістерді дұрыс сақтауды,
+                            сипаттауды және бөлісуді де үйренеміз.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="goals-card">
+                    <div class="goals-heading">
+                        <span class="goals-icon">◎</span>
+                        <h3>Басты мақсаттар</h3>
+                    </div>
+
+                    <div class="goal-row">
+                        <span class="goal-number">01</span>
+                        <div>
+                            <strong>Әдемі интерфейс</strong>
+                            <p>Түсінікті әрі заманауи веб-дизайн жасау</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-row">
+                        <span class="goal-number">02</span>
+                        <div>
+                            <strong>Веб-технологиялар</strong>
+                            <p>HTML, CSS және JavaScript қолдану</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-row">
+                        <span class="goal-number">03</span>
+                        <div>
+                            <strong>Git дағдылары</strong>
+                            <p>Өзгерістерді коммиттер арқылы сақтау</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-row">
+                        <span class="goal-number">04</span>
+                        <div>
+                            <strong>Жобаны жариялау</strong>
+                            <p>GitHub арқылы кодпен бөлісу</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Мүмкіндіктер -->
+        <section class="section features-section" id="features">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">
+                        <span class="kicker-icon">✧</span> Мүмкіндіктері
+                    </span>
+
+                    <h2>Жобаның ерекше тұстары</h2>
+
+                    <p>
+                        Қарапайым құрылым, әдемі көрініс және пайдалы технологиялар.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-lavender">✿</div>
+                        <h3>Нәзік дизайн</h3>
+                        <p>Молочный фон, күлгін акценттер және жұмсақ көлеңкелер.</p>
+                        <span class="feature-index">01 / ДИЗАЙН</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-pink">Aa</div>
+                        <h3>Google Fonts</h3>
+                        <p>Оқуға ыңғайлы қаріптер мен үйлесімді типография.</p>
+                        <span class="feature-index">02 / ҚАРІП</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-blue">▣</div>
+                        <h3>Бейімделгіш бет</h3>
+                        <p>Компьютерде де, телефонда да дұрыс көрінетін құрылым.</p>
+                        <span class="feature-index">03 / RESPONSIVE</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-green">&lt;/&gt;</div>
+                        <h3>JavaScript</h3>
+                        <p>Сәлемдесу хабарламасы және интерактивті мәзір.</p>
+                        <span class="feature-index">04 / ЛОГИКА</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-peach">▤</div>
+                        <h3>Реттелген файлдар</h3>
+                        <p>HTML, CSS және JavaScript бөлек файлдарда орналасқан.</p>
+                        <span class="feature-index">05 / ҚҰРЫЛЫМ</span>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon icon-purple">◇</div>
+                        <h3>Git нұсқалары</h3>
+                        <p>Коммиттер, тегтер және өзгерістер тарихы сақталады.</p>
+                        <span class="feature-index">06 / GIT</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Технологиялар -->
+        <section class="section technologies-section" id="technologies">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">
+                        <span class="kicker-icon">✧</span> Технологиялар
+                    </span>
+
+                    <h2>Жобаның негізі</h2>
+
+                    <p>Әр технологияның өз міндеті бар.</p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-symbol tech-html">5</div>
+                        <div>
+                            <h3>HTML5</h3>
+                            <p>Бет құрылымы</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-symbol tech-css">3</div>
+                        <div>
+                            <h3>CSS3</h3>
+                            <p>Стиль және дизайн</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-symbol tech-js">JS</div>
+                        <div>
+                            <h3>JavaScript</h3>
+                            <p>Интерактивтілік</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-symbol tech-git">◆</div>
+                        <div>
+                            <h3>Git</h3>
+                            <p>Нұсқаларды басқару</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-symbol tech-github">⌘</div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>Кодты сақтау</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-symbol tech-font">Aa</div>
+                        <div>
+                            <h3>Google Fonts</h3>
+                            <p>Әдемі қаріптер</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Нұсқалар -->
+        <section class="section versions-section" id="versions">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">
+                        <span class="kicker-icon">✧</span> Даму тарихы
+                    </span>
+
+                    <h2>Әр нұсқада — жаңа қадам</h2>
+
+                    <p>Жобаның даму барысы мен негізгі өзгерістері.</p>
+                </div>
+
+                <div class="timeline">
+
+                    <article class="timeline-card">
+                        <div class="timeline-top">
+                            <span class="version-badge">v1.0</span>
+                            <span class="timeline-status">Алғашқы нұсқа</span>
+                        </div>
+
+                        <h3>Бастапқы веб-бет</h3>
+
+                        <ul>
+                            <li>HTML құрылымы жасалды</li>
+                            <li>CSS стильдері қосылды</li>
+                            <li>Негізгі файлдар ұйымдастырылды</li>
+                        </ul>
+
+                        <span class="timeline-date">Бірінші кезең</span>
+                    </article>
+
+                    <article class="timeline-card timeline-card-featured">
+                        <div class="timeline-top">
+                            <span class="version-badge version-badge-dark">v2.0</span>
+                            <span class="timeline-status">Жаңартылған</span>
+                        </div>
+
+                        <h3>Дизайнды жетілдіру</h3>
+
+                        <ul>
+                            <li>Беттің безендірілуі жаңартылды</li>
+                            <li>Google Fonts қосылды</li>
+                            <li>Қосымша стильдер енгізілді</li>
+                        </ul>
+
+                        <span class="timeline-date">Келесі кезең</span>
+                    </article>
+
+                </div>
+
+                <div class="closing-note">
+                    <span class="closing-star">✧</span>
+                    <p>Үлкен нәтиже — кішкентай қадамдардың жиынтығы.</p>
+                    <span class="closing-heart">♡</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Қорытынды шақыру -->
+        <section class="final-section">
+            <div class="container final-card">
+                <div class="final-decoration decoration-one"></div>
+                <div class="final-decoration decoration-two"></div>
+
+                <span class="final-kicker">Келесі қадам — сенің қолыңда</span>
+
+                <h2>
+                    Идеяңды іске асыр.<br>
+                    <span>Өзіңді дамыт!</span>
+                </h2>
+
+                <p>
+                    Жобаны қарап, кодпен танысып, веб-әзірлеу әлеміне қадам жаса.
+                </p>
+
+                <a href="https://github.com/kazbalinova/GitCommitRules"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="button button-white">
+                    GitHub-та көру <span>↗</span>
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <section id="about" class="about">
-        <h2>About this project</h2>
-        <p>
-            This project helps me learn version control,
-            meaningful commits and clean code structure.
-        </p>
-    </section>
-
+    <!-- Төменгі бөлім -->
     <footer class="footer">
-        <p>© 2026 GitSpace. Created for learning Git.</p>
+        <div class="container footer-content">
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                <span>GitCommit<span class="logo-accent">Rules</span></span>
+            </a>
+
+            <p class="footer-copy">
+                © <span id="currentYear">2026</span> GitCommitRules.
+                Үйрену мен дамуға арналған жоба.
+            </p>
+
+            <a class="footer-link"
+               href="https://github.com/kazbalinova/GitCommitRules"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub <span>↗</span>
+            </a>
+        </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <button class="back-to-top" id="backToTop" aria-label="Жоғарыға оралу">
+        ↑
+    </button>
+
 </body>
 </html>
